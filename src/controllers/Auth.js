@@ -58,7 +58,7 @@ const loginUser = asyncHandler(async (req, res) => {
     throw new ApiError(400, "All fields are required with non-empty value");
   }
 
-  const user = await User.findOne({ email });
+  const user = await User.findOne({ email }).select("-password");
   if (!user) {
     throw new ApiError(400, "Invalid Credentials");
   }
