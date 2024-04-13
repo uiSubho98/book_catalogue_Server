@@ -48,4 +48,11 @@ const removeWishList = asyncHandler(async (req, res) => {
     .json(new ApiResponse(200, {}, "Book removed from wishlist"));
 });
 
-export { addWishList, removeWishList };
+const getWishList = asyncHandler(async (req, res) => {
+  const wishlistItems = await Wishlist.find({ });
+  return res
+    .status(201)
+    .json(new ApiResponse(200, wishlistItems, "Book removed from wishlist"));
+});
+
+export { addWishList, removeWishList,getWishList };
