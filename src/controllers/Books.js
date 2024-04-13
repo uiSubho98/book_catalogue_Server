@@ -1,7 +1,7 @@
 import { Book } from "../models/Books.js";
 import asyncHandler from "../utils/AsyncHandler.js";
 import ApiError from "../utils/ApiError.js";
-import { uploadOnCloudinary } from "../utils/cloudinary.js";
+import { uploadOnCloudinary } from "../utils/Cloudinary.js";
 import ApiResponse from "../utils/ApiResponse.js";
 import { User } from "../models/Users.js";
 import mongoose from "mongoose";
